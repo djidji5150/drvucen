@@ -1,4 +1,4 @@
-:HL["/drvucen/_next/static/chunks/3fq41png_r7it.css","style"]
+:HL["/drvucen/_next/static/chunks/23gdyd6wo9c-k.css","style"]
 :HL["/drvucen/_next/static/media/6f3ab718e3727c1a-s.p.3huc2loe0ie8a.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/drvucen/_next/static/media/8bcddb47c8219945-s.p.1spbknb88wd48.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/drvucen/_next/static/media/9eff0a3f1ba11d74-s.p.3aak_kra40y8r.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
@@ -6,4 +6,4 @@
 3:[["children",{"s":"__PAGE__","h":160}]]
 2:[["children",{"s":{"n":"slug","t":"d","k":"celulit-i-visak-kilograma","s":[]},"h":96,"c":"$Q3"}]]
 1:[["children",{"s":"usluge","h":96,"c":"$Q2"}]]
-0:{"b":"h02DQ3SvXfMwKqwogqYuG","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"fIBp2bpPSE03dfAHH2Y7b","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
