@@ -37,44 +37,33 @@ body {
 
 .placeholder {
   position: relative;
-  display: block;
+  display: flex;
   width: 100%;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
-  isolation: isolate;
+  border: 1px solid var(--ph-border);
+  background: var(--ph-bg);
+  color: var(--ph-fg);
 }
 
-.placeholder-orb,
-.placeholder-beam,
-.placeholder-grid {
+.placeholder-lines {
   position: absolute;
   inset: 0;
+  background-image:
+    linear-gradient(to right, var(--ph-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--ph-line) 1px, transparent 1px);
+  background-size: 24px 24px;
   pointer-events: none;
 }
 
-.placeholder-orb {
-  background:
-    radial-gradient(circle at var(--ox, 28%) var(--oy, 30%), var(--a) 0%, transparent 42%),
-    radial-gradient(circle at var(--ox2, 78%) var(--oy2, 70%), var(--b) 0%, transparent 46%),
-    linear-gradient(145deg, var(--c), var(--d));
-}
-
-.placeholder-beam {
-  background: linear-gradient(
-    var(--ang, 118deg),
-    transparent 36%,
-    color-mix(in srgb, white 28%, transparent) 50%,
-    transparent 64%
-  );
-  mix-blend-mode: overlay;
-}
-
-.placeholder-grid {
-  background-image:
-    linear-gradient(to right, color-mix(in srgb, white 14%, transparent) 1px, transparent 1px),
-    linear-gradient(to bottom, color-mix(in srgb, white 14%, transparent) 1px, transparent 1px);
-  background-size: 28px 28px;
-  mask-image: radial-gradient(circle at 50% 40%, black, transparent 75%);
-  opacity: 0.45;
+.placeholder-mark {
+  position: relative;
+  z-index: 1;
+  width: 3.25rem;
+  height: 3.25rem;
+  flex-shrink: 0;
+  opacity: 0.7;
 }
 
 .placeholder-label {
@@ -82,79 +71,36 @@ body {
   right: 1rem;
   bottom: 1rem;
   z-index: 1;
-  border: 1px solid color-mix(in srgb, white 28%, transparent);
-  background: color-mix(in srgb, black 28%, transparent);
-  padding: 0.35rem 0.7rem;
-  font-size: 0.68rem;
+  border: 1px solid var(--ph-fg);
+  background: var(--ph-bg);
+  padding: 0.3rem 0.65rem;
+  font-size: 0.65rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: white;
-  backdrop-filter: blur(8px);
+  color: var(--ph-fg);
 }
 
 .tone-0 {
-  --a: #c9a48a;
-  --b: #8f1d2c;
-  --c: #1a1614;
-  --d: #3a2a28;
-  --ox: 22%;
-  --oy: 24%;
-  --ox2: 82%;
-  --oy2: 78%;
-  --ang: 112deg;
+  --ph-bg: #e8e2d8;
+  --ph-fg: #141210;
+  --ph-line: rgb(20 18 16 / 0.1);
+  --ph-border: rgb(20 18 16 / 0.16);
 }
 .tone-1 {
-  --a: #d7c6b4;
-  --b: #4c5d62;
-  --c: #201c1a;
-  --d: #2f3536;
-  --ox: 70%;
-  --oy: 18%;
-  --ox2: 18%;
-  --oy2: 80%;
-  --ang: 98deg;
+  --ph-bg: #141210;
+  --ph-fg: #f3f1ed;
+  --ph-line: rgb(243 241 237 / 0.1);
+  --ph-border: #141210;
 }
 .tone-2 {
-  --a: #e0b7a2;
-  --b: #6b1522;
-  --c: #241918;
-  --d: #4a322c;
-  --ox: 48%;
-  --oy: 8%;
-  --ox2: 90%;
-  --oy2: 60%;
-  --ang: 128deg;
+  --ph-bg: #8f1d2c;
+  --ph-fg: #f3f1ed;
+  --ph-line: rgb(243 241 237 / 0.14);
+  --ph-border: #8f1d2c;
 }
 .tone-3 {
-  --a: #b9c4c2;
-  --b: #8a6a4f;
-  --c: #15181a;
-  --d: #2c3334;
-  --ox: 14%;
-  --oy: 70%;
-  --ox2: 76%;
-  --oy2: 22%;
-  --ang: 76deg;
-}
-.tone-4 {
-  --a: #f0dcc8;
-  --b: #7a2430;
-  --c: #191412;
-  --d: #3d2c26;
-  --ox: 86%;
-  --oy: 40%;
-  --ox2: 24%;
-  --oy2: 16%;
-  --ang: 140deg;
-}
-.tone-5 {
-  --a: #cfc6bb;
-  --b: #5d3d42;
-  --c: #121110;
-  --d: #2a2624;
-  --ox: 40%;
-  --oy: 82%;
-  --ox2: 8%;
-  --oy2: 20%;
-  --ang: 104deg;
+  --ph-bg: #d4cbbd;
+  --ph-fg: #141210;
+  --ph-line: rgb(20 18 16 / 0.12);
+  --ph-border: rgb(20 18 16 / 0.16);
 }
