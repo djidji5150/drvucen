@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { MediaPlaceholder } from "../../components/MediaPlaceholder";
+import { CoverPhoto } from "../../components/CoverPhoto";
 import { categories, services } from "../../lib/content";
 
 export const metadata: Metadata = {
@@ -38,7 +38,12 @@ export default function UslugePage() {
                     href={`/usluge/${s.slug}`}
                     className="group overflow-hidden rounded-[1.5rem] bg-card ring-1 ring-[var(--line)]"
                   >
-                    <MediaPlaceholder seed={s.slug} className="h-36" />
+                    <CoverPhoto
+                      src={s.image}
+                      alt={s.title}
+                      className="h-36"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
                     <div className="p-5">
                       <h3 className="font-serif text-xl tracking-tight">{s.title}</h3>
                       <p className="mt-2 text-sm leading-relaxed text-muted">{s.summary}</p>

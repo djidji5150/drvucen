@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MediaPlaceholder } from "../components/MediaPlaceholder";
+import { CoverPhoto } from "../components/CoverPhoto";
 import { categories, clinic, services } from "../lib/content";
 
 export default function Home() {
@@ -47,10 +47,12 @@ export default function Home() {
             </div>
           </div>
           <div className="lg:col-span-5">
-            <MediaPlaceholder
-              seed="hero"
-              label="Foto uskoro"
+            <CoverPhoto
+              src="/media/hero.jpg"
+              alt="Tretman lica u dermatološkoj ordinaciji"
               className="aspect-[4/5] rounded-[2rem] sm:aspect-[5/6]"
+              priority
+              sizes="(max-width: 1024px) 100vw, 40vw"
             />
           </div>
         </div>
@@ -84,16 +86,17 @@ export default function Home() {
           </Link>
         </div>
         <div className="mt-12 grid gap-5 md:grid-cols-3">
-          {categories.map((cat, i) => (
+          {categories.map((cat) => (
             <Link
               key={cat.slug}
               href={`/usluge/${cat.slug}`}
               className="group overflow-hidden rounded-[1.75rem] bg-card ring-1 ring-[var(--line)]"
             >
-              <MediaPlaceholder
-                seed={cat.slug}
-                label={`0${i + 1}`}
+              <CoverPhoto
+                src={cat.image}
+                alt={cat.title}
                 className="h-56"
+                sizes="(max-width: 768px) 100vw, 33vw"
               />
               <div className="p-6">
                 <h3 className="font-serif text-2xl tracking-tight">{cat.title}</h3>
@@ -131,10 +134,11 @@ export default function Home() {
       </section>
 
       <section className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-24 lg:grid-cols-2">
-        <MediaPlaceholder
-          seed="ordinacija"
-          label="Ordinacija"
+        <CoverPhoto
+          src="/media/ordinacija.jpg"
+          alt="Specijalista dermatovenerolog"
           className="aspect-[4/3] rounded-[2rem]"
+          sizes="(max-width: 1024px) 100vw, 50vw"
         />
         <div>
           <p className="text-[0.7rem] tracking-[0.28em] text-muted uppercase">Specijalista</p>

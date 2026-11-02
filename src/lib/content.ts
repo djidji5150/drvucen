@@ -24,6 +24,7 @@ export type Service = {
   title: string;
   category: "opsta" | "laser" | "estetska";
   summary: string;
+  image: string;
   body: string[];
 };
 
@@ -34,6 +35,7 @@ export const categories = [
     title: "Opšta dermatovenerologija",
     summary:
       "Dijagnostika i liječenje bolesti kože, dlaka i noktiju, alergološka testiranja, dermoskopija i biopsija.",
+    image: "/media/opsta.jpg",
   },
   {
     slug: "laserski-tretmani",
@@ -41,6 +43,7 @@ export const categories = [
     title: "Laserski tretmani",
     summary:
       "Fotona Nd:YAG, ER:YAG i QX-Max laseri za epilaciju, kapilare, ožiljke, tetovaže i benigni izrasline.",
+    image: "/media/laser.jpg",
   },
   {
     slug: "estetska-dermatologija",
@@ -48,6 +51,7 @@ export const categories = [
     title: "Estetska dermatologija",
     summary:
       "Mezoterapija bez igle, hemijski pilinzi, tretman hiperhidroze i ultrazvučna kavitacija.",
+    image: "/media/estetska.jpg",
   },
 ];
 
@@ -58,6 +62,7 @@ export const services: Service[] = [
     category: "opsta",
     summary:
       "Dermatološki pregled i liječenje poremećaja koji utiču na rad, komfor i izgled kože.",
+    image: "/media/koza.jpg",
     body: [
       "Dermatološki poremećaji mogu biti uzrok nesposobnosti za rad (ekcemi šaka, gljivične infekcije, psorijaza šaka, znojenje dlanova), smanjenja komfora (svrab, genitalni herpes) i otežane socijalne komunikacije (promjene na licu, vitiligo, psorijaza na licu).",
       "Nokti imaju značajnu ulogu u zaštiti prstiju šaka i stopala. Izgled noktiju može upozoriti da se nešto ozbiljno dešava unutar organizma.",
@@ -69,6 +74,7 @@ export const services: Service[] = [
     category: "opsta",
     summary:
       "Pregled, dijagnostika i terapija seksualno prenosivih infekcija.",
+    image: "/media/konsultacija.jpg",
     body: [
       "Spolno prenosive bolesti prenose se seksualnim kontaktom. Uzročnici mogu preći sa osobe na osobu putem krvi, semena ili vaginalne tečnosti. Simptomi zavise od uzročnika i mogu biti akutni ili hronični.",
       "Antibiotici mogu izliječiti mnoge seksualno prenosive bolesti, uključujući gonoreju, sifilis, hlamidije i trihomonas. Terapija mora biti sprovedena u potpunosti i u punoj dozi, bez obzira na prestanak tegoba.",
@@ -80,6 +86,7 @@ export const services: Service[] = [
     title: "Alergološka testiranja",
     category: "opsta",
     summary: "Prick i epikutani kožni testovi za otkrivanje alergena.",
+    image: "/media/alergija.jpg",
     body: [
       "Alergijski testovi su nezamjenjivi u otkrivanju alergena. U ustanovi izvodimo Prick i epikutane kožne testove — jednostavne i bezbjedne procedure kojima se često brzo otkrije uzrok koprivnjače, atopijskog dermatitisa, alergijskog rinitisa i konjunktivitisa, bronhijalne astme i sličnih stanja.",
       "Prick testovi otkrivaju uzročnike ranih alergijskih reakcija. Testiramo inhalatorne i nutritivne alergene.",
@@ -92,6 +99,7 @@ export const services: Service[] = [
     category: "opsta",
     summary:
       "Uzimanje uzorka oboljele kože radi precizne dijagnoze i odluke o terapiji.",
+    image: "/media/biopsija.jpg",
     body: [
       "Biopsija kože je uzimanje uzorka oboljele kože radi precizne dijagnoze, potrebne za odluku o odgovarajućoj terapiji.",
       "Proceduru obavlja dermatolog u lokalnoj anesteziji. Nakon injekcije anestetika uzima se veoma mali segment kože skalpelom ili punch instrumentom.",
@@ -104,6 +112,7 @@ export const services: Service[] = [
     category: "opsta",
     summary:
       "Neinvazivni pregled mladeža i pigmentnih lezija, važan u ranom otkrivanju melanoma.",
+    image: "/media/dermoskop.jpg",
     body: [
       "Dermoskopija je jednostavna, neinvazivna, brza i korisna metoda za pouzdaniju dijagnozu pigmentnih lezija i mladeža, posebno za razlikovanje melanoma od benignih pigmentnih promjena. Klinička pouzdanost dijagnostikovanja melanoma „golim okom“ procjenjuje se na 65%, a dermoskopski pregled je podiže na oko 90%.",
       "Dobijenu sliku moguće je sačuvati, kasnije uporediti ili poslati drugom dermatologu na dodatnu ekspertizu. Savjetujemo da se mladeži pregledaju dermoskopski najmanje jednom godišnje. Ako dermatolog procijeni da mladež treba ukloniti, to treba obaviti što prije.",
@@ -115,6 +124,7 @@ export const services: Service[] = [
     category: "laser",
     summary:
       "Nd:YAG laser Fotona SP Plus — sigurna epilacija za sve tipove kože.",
+    image: "/media/epilacija.jpg",
     body: [
       "Epilacija medicinskim laserom je najefikasnija i najtrajnija metoda uklanjanja neželjenih dlaka. Laser ima fototermičko dejstvo: svjetlosna energija se apsorbuje u melaninu korijena dlake i pretvara u toplotu koja uništava folikul.",
       "Laserska epilacija je metoda izbora za tamne dlake. Sjeda i izrazito svijetla dlaka ne može se uništiti laserom. Trajno se uništava samo folikul u anagenoj fazi rasta, pa je potreban veći broj tretmana u razmaku od 4 do 6 nedjelja.",
@@ -128,6 +138,7 @@ export const services: Service[] = [
     category: "laser",
     summary:
       "Nd:YAG 1064 nm za trajno zatvaranje sitnih krvnih sudova na licu, tijelu i nogama.",
+    image: "/media/lice.jpg",
     body: [
       "Uklanjanje vaskularnih promjena Nd:YAG laserom (1064 nm) je siguran, bezbolan i efikasan modalitet za male krvne sudove prečnika 0,5–2,5 mm na licu, tijelu i nogama.",
       "Laserski snop se apsorbuje u pigmentnim ćelijama krvnog suda i dovodi do fototermokoagulacije — trajnog zatvaranja suda. Aparat ima kontinuirano hlađenje, pa je tretman gotovo bezbolan, a okolna koža ostaje neizmijenjena osim blagog prolaznog crvenila.",
@@ -141,6 +152,7 @@ export const services: Service[] = [
     category: "laser",
     summary:
       "Nd:YAG laser kao brza, bezbolna alternativa dugotrajnoj sistemskoj terapiji.",
+    image: "/media/nokti.jpg",
     body: [
       "Gljivična infekcija nokta je često oboljenje, a liječenje je dugotrajno. Najčešće se primjenjuje sistemska terapija antimikoticima (6 do 12 nedjelja).",
       "Nd:YAG laser je brza, bezbolna procedura koja dovodi do sterilizacije izmijenjene nokatne ploče. To je metoda izbora kod osoba kojima su lijekovi kontraindikovani zbog oštećenja bubrega i jetre. Postupak traje nekoliko minuta, ponavlja se svakih 7 do 10 dana; do potpunog saniranja obično je potrebno 6 do 8 tretmana.",
@@ -151,6 +163,7 @@ export const services: Service[] = [
     title: "Uklanjanje bora i strija",
     category: "laser",
     summary: "ER:YAG Fraxel laser Fotona SP Plus za obnavljanje kože i strije.",
+    image: "/media/bore.jpg",
     body: [
       "ER:YAG Fraxel laser je rješenje za bore i znakove starenja. Na jednostavan način uklanjaju se promjene nastale štetnim dejstvom sunca. Nakon laserskog pilinga koža postaje glatka i zategnuta.",
       "Tretman je pogodan za osobe iznad 30 godina, sa umornom, sivom kožom bez tonusa, koje dugo borave na suncu ili u zadimljenim prostorijama.",
@@ -163,6 +176,7 @@ export const services: Service[] = [
     category: "laser",
     summary:
       "Frakcijska ablacija sa komforom neablativnog tretmana — ožiljci, bore i strije.",
+    image: "/media/laser-lice.jpg",
     body: [
       "Fraxel ER:YAG postiže efekat hirurškog lasera uz komfor i sigurnost neablativnog tretmana. Ablacija je raspoređena u stupcima epidermisa i dermisa promjera oko 100 µm i dubine do 300 µm, čime se podstiče remodeliranje vezivnog tkiva.",
       "Trenutno je jedan od najboljih tretmana ožiljaka nakon akni. Oporavak je brz, bez neugodnog ljuštenja i krastica. Može se primijeniti i na osjetljivoj koži tinejdžera. Tretmani se ponavljaju na dva mjeseca i duže; obnova kolagena je dug proces, pa se konačni rezultat vidi nakon 6–12 mjeseci.",
@@ -173,6 +187,7 @@ export const services: Service[] = [
     title: "Tretman akni i otklanjanje ožiljaka",
     category: "laser",
     summary: "Fraxel ER:YAG za ožiljke nakon akni, uz brži oporavak.",
+    image: "/media/akne.jpg",
     body: [
       "Ožiljci nakon akni su ozbiljan estetski problem. Fraxel ER:YAG remodelira vezivno tkivo frakcijskom ablacijom, uz brži oporavak nego kod klasičnog ablativnog ili dubokog hemijskog resurfacinga.",
       "Broj tretmana zavisi od indikacije i željenog rezultata. Tretmani se ponavljaju na dva mjeseca i duže. Konačni rezultat vidi se nakon 6–12 mjeseci.",
@@ -184,6 +199,7 @@ export const services: Service[] = [
     category: "laser",
     summary:
       "Hirurški ER:YAG laser umjesto skalpela — bez krvarenja, kratko zarastanje.",
+    image: "/media/pregled.jpg",
     body: [
       "Erbium:YAG laser koristi se za uklanjanje dobroćudnih promjena na koži lica i tijela bez krvarenja i skalpela: meki fibromi, seboroične keratoze, lentigo simplex, ksantelazme, siringomi, hiperplazija lojnih žlijezda i milije.",
       "Tretmani su ugodni; najčešće je dovoljna anestetska krema 30–60 minuta prije zahvata. Zarastanje traje 7 do 10 dana, nakon čega ostaje mlada koža bez neželjenih tragova.",
@@ -195,6 +211,7 @@ export const services: Service[] = [
     title: "Uklanjanje tetovaža",
     category: "laser",
     summary: "Fotona QX-Max Q-switch laser za tetovaže svih boja.",
+    image: "/media/tetovaza.jpg",
     body: [
       "Q-switch laser uništava pigment tetovaže ekstremno kratkim impulsom (nanosekunde), dok okolno tkivo ostaje pošteđeno. Fotona QX-Max omogućava uklanjanje tetovaža svih boja bez rizika ožiljaka kada se radi pravilno.",
       "Prosječno je potrebno 3 do 5 tretmana za profesionalnu tetovažu; amaterske mogu zahtijevati više. Prvi tretman je slabiji radi procjene reakcije kože. Razmak je 6 do 8 nedjelja. Svježe tetovaže se u pravilu uklanjaju tek godinu dana nakon tetoviranja.",
@@ -206,6 +223,7 @@ export const services: Service[] = [
     title: "Uklanjanje znakova starenja",
     category: "laser",
     summary: "Neablativni Nd:YAG za osvježenje kože i fine bore.",
+    image: "/media/starenje.jpg",
     body: [
       "Neablativni Nd:YAG laser precizno zagrijava dermis i stimuliše fibroblaste na produkciju novog kolagena.",
       "Postiže se vidljivo osvježenje kože lica i vrata, poboljšanje turgora i elastičnosti, poravnavanje finih bora, redukcija proširenih pora i difuznog crvenila. Procedura je pogodna za žene i muškarce svih tipova kože sa prvim znacima starenja.",
@@ -217,6 +235,7 @@ export const services: Service[] = [
     category: "estetska",
     summary:
       "Skeyndor no-needle mezoterapija — bez uboda, bola, otoka i podliva.",
+    image: "/media/mezoterapija.jpg",
     body: [
       "Mezoterapija bez igle je savremena, bezbolna procedura za njegu lica i tijela. Aktivne supstance doprema u dublje slojeve kože i potkožno tkivo. Koristi se za pigmentacije, bore, opuštenu i dehidriranu kožu, te ograničene masne naslage i celulit.",
       "Skeyndor pod dejstvom pulsne naizmjenične struje stvara privremene vodene kanale (mezopore) između epidermisa i dermisa. Proces ima četiri faze: aktivacija, hidroelektroforeza, elektroporacija i krioelektroforeza.",
@@ -228,6 +247,7 @@ export const services: Service[] = [
     title: "Prekomjerno znojenje",
     category: "estetska",
     summary: "Botulinum toxin za hiperhidrozu dlanova, stopala i pazuha.",
+    image: "/media/znojenje.jpg",
     body: [
       "Hiperhidroza je lučenje znoja veće od potrebnog za hlađenje organizma. Najčešće je na dlanovima, stopalima i ispod pazuha i može ometati svakodnevne aktivnosti.",
       "Botulinum toxin (botoks) blokira nerve koji aktiviraju znojne žlijezde. Aplicira se potkožno u zahvaćene regije. Efekat traje 6 mjeseci do godinu dana. Na pazuhu procedura nije bolna; na dlanovima je nešto neprijatnija.",
@@ -238,6 +258,7 @@ export const services: Service[] = [
     title: "Hemijski pilinzi",
     category: "estetska",
     summary: "Glikolna kiselina i TCA piling lica, vrata, šaka i tijela.",
+    image: "/media/piling.jpg",
     body: [
       "Hemijski pilinzi rade se na licu, vratu, šakama, rukama i nogama. Dijele se na površne, srednje duboke i duboke.",
       "Glikolnom kiselinom: površni piling (20%) poboljšava izgled kože; srednje duboki (do 70%) sprovodi samo ljekar. TCA piling (15%, 25% ili 35%) koristi se za ožiljke, fine bore i oštećenja od sunca.",
@@ -250,6 +271,7 @@ export const services: Service[] = [
     category: "estetska",
     summary:
       "Ultrazvučna kavitacija za tvrdokorne masne naslage, bez operacije i oporavka.",
+    image: "/media/tijelo.jpg",
     body: [
       "Ultrazvučna kavitacija je neinvazivna, bezbolna terapija usmjerena na tvrdokorne naslage masti na bokovima, bedrima, stražnjici, koljenima, trbuhu i nadlakticama — naslage koje dijeta i sport često ne uklone.",
       "Energija ultrazvučnog vala selektivno razbija masne stanice ispod kože, dok površina kože, živci, žile i mišići ostaju netaknuti. Prvi rezultati često se vide već nakon prvog postupka; za pun efekat potrebno je nekoliko dodatnih tretmana.",
@@ -266,13 +288,13 @@ export function servicesByCategory(id: Service["category"]) {
 }
 
 export const gallerySlots = [
-  "Recepcija",
-  "Ordinacija",
-  "Laserska sala",
-  "Konsultacije",
-  "Fotona sistemi",
-  "Dermoskopija",
-  "Estetski kabinet",
-  "Čekaonica",
-  "Tretman lica",
+  { title: "Recepcija", image: "/media/cekaonica.jpg" },
+  { title: "Ordinacija", image: "/media/ordinacija.jpg" },
+  { title: "Laserska sala", image: "/media/aparatura.jpg" },
+  { title: "Konsultacije", image: "/media/konsultacija.jpg" },
+  { title: "Medicinska oprema", image: "/media/laser.jpg" },
+  { title: "Laboratorijska dijagnostika", image: "/media/dermoskop.jpg" },
+  { title: "Estetski kabinet", image: "/media/estetska.jpg" },
+  { title: "Klinika", image: "/media/klinika.jpg" },
+  { title: "Tretman lica", image: "/media/hero.jpg" },
 ];

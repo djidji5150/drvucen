@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { MediaPlaceholder } from "../../../components/MediaPlaceholder";
+import { CoverPhoto } from "../../../components/CoverPhoto";
 import {
   categories,
   clinic,
@@ -51,7 +51,12 @@ export default async function ServicePage({ params }: Props) {
               href={`/usluge/${s.slug}`}
               className="overflow-hidden rounded-[1.5rem] bg-card ring-1 ring-[var(--line)]"
             >
-              <MediaPlaceholder seed={s.slug} className="h-40" />
+              <CoverPhoto
+                src={s.image}
+                alt={s.title}
+                className="h-40"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
               <div className="p-5">
                 <h2 className="font-serif text-2xl tracking-tight">{s.title}</h2>
                 <p className="mt-2 text-sm text-muted">{s.summary}</p>
@@ -76,10 +81,11 @@ export default async function ServicePage({ params }: Props) {
       </p>
       <h1 className="mt-3 font-serif text-4xl tracking-tight sm:text-6xl">{service.title}</h1>
       <p className="mt-5 text-lg text-muted">{service.summary}</p>
-      <MediaPlaceholder
-        seed={service.slug}
-        label="Foto uskoro"
+      <CoverPhoto
+        src={service.image}
+        alt={service.title}
         className="mt-10 aspect-[16/9] rounded-[2rem]"
+        sizes="(max-width: 768px) 100vw, 768px"
       />
       <div className="mt-10 space-y-5 text-[1.05rem] leading-relaxed">
         {service.body.map((p) => (
