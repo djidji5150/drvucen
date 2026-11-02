@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://drvucen.com/sitemap.xml
